@@ -1,5 +1,6 @@
 # Curing-Chamber
-Build an automated system to monitor and control the temperature and relative humidity of a curing chamber.
+Build an automated system to monitor and control the temperature and relative humidity of a curing chamber.  Main file runs as a cron job every 10 minutes.
+
 ![Curing Chamber](http://i.imgur.com/PM0CppD.jpg)
 
 # Hardware Requirements
