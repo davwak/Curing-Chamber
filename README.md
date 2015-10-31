@@ -10,6 +10,16 @@ This reads the current temperature and relative humidity inside your curing cham
 
 All data is logged to a MySQL database, as well as a "last run" CURINGLOG file that you can check for last actions.  Optionally you can also use the Raspberry Pi camera to take a picture inside the fridge for display on a webpage.
 
+# Getting Started
+* Install and configure all the software in the Software section below.
+* Name your WeMo switches "humidifier" and "temperature" (or you can edit the names in main()).
+* I put my /raspi-rht/th_2 in /home/pi.  If you want something else, edit the location in main().
+* You can turn on/off the writeDB() and takePicture() functions within main().
+* Edit the connection options (hostname, username, password) in the writeDB() function.
+* Create a crontab entry for the curingControl.py file. I have mine run every 10 minutes:
+
+`*/10 * * * * /home/pi/curingControl.py`
+
 # Hardware Requirements
 * Wine fridge.
 * Raspberry Pi 2 B.
