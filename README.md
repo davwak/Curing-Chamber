@@ -1,5 +1,6 @@
 # Curing-Chamber
 Build an automated system to monitor and control the temperature and relative humidity of a curing chamber.
+![Curing Chamber](http://i.imgur.com/PM0CppD.jpg)
 
 # Hardware Requirements
 * Wine fridge.
