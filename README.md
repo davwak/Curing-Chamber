@@ -43,3 +43,9 @@ Build an automated system to monitor and control the temperature and relative hu
 # To Do
 * Send SMS alerts for various events (out of water, can't connect to WeMo devices).
 * Create graphs with HTML5 based on MySQL data.
+
+# References
+* [https://github.com/FiZiX/raspi-rht](https://github.com/FiZiX/raspi-rht) - I basically forked my project from this (before I setup git).  Amazing project and ideas.
+* [https://hackaday.io/project/3766/instructions](https://hackaday.io/project/3766/instructions) - Helped a lot with the wiring of the sensor.
+* [http://ouimeaux.readthedocs.org/en/latest/readme.html](http://ouimeaux.readthedocs.org/en/latest/readme.html)
+* [http://iada.nl/en/blog/article/temperature-monitoring-raspberry-pi](http://iada.nl/en/blog/article/temperature-monitoring-raspberry-pi)
