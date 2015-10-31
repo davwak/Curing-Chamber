@@ -13,7 +13,7 @@ All data is logged to a MySQL database, as well as a "last run" CURINGLOG file t
 # Getting Started
 * Install and configure all the software in the Software section below.
 * Name your WeMo switches "humidifier" and "temperature" (or you can edit the names in main()).
-* I put my /raspi-rht/th_2 in /home/pi.  If you want something else, edit the location in main().
+* I put my [/raspi-rht/th_2](https://github.com/FiZiX/raspi-rht) in /home/pi.  If you want something else, edit the location in main().
 * You can turn on/off the writeDB() and takePicture() functions within main().
 * Edit the connection options (hostname, username, password) in the writeDB() function.
 * Create a crontab entry for the curingControl.py file. I have mine run every 10 minutes:
