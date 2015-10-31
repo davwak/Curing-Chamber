@@ -4,7 +4,11 @@ Build an automated system to monitor and control the temperature and relative hu
 ![Curing Chamber](http://i.imgur.com/PM0CppD.jpg)
 
 # Usage
-The main Python file curingControl.py should run as a cron job every 10 minutes.  It reads the current temperature and relative humidity inside your curing chamber.  Depending on the results, it will adjust power to the fridge and the humidifier, via the WeMo Insight switches, to keep both the temperature and humidity within your range.  It can also detect when your humidifier is out of water.  Optionally you can log all this data to a database, and also use the Raspberry Pi camera to take a picture inside the chamber.
+The main Python file curingControl.py should run as a cron job every 10 minutes.  
+
+This reads the current temperature and relative humidity inside your curing chamber from the AM2302 sensor.  You can set ranges for your optimal temperature and humidity within the fridge.  The program will then adjust the power to your fridge and humidifier when it gets outside of these ranges (via the WeMo Insight switches).
+
+All data is logged to a MySQL database, as well as a "last run" CURINGLOG file that you can check for last actions.  Optionally you can also use the Raspberry Pi camera to take a picture inside the fridge for display on a webpage.
 
 # Hardware Requirements
 * Wine fridge.
