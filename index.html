@@ -30,6 +30,15 @@
         <p><img src="http://i.imgur.com/PM0CppD.jpg" alt="Curing Chamber"></p>
 
 <h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>The main Python file curingControl.py should run as a cron job every 10 minutes.  </p>
+
+<p>This reads the current temperature and relative humidity inside your curing chamber from the AM2302 sensor.  You can set ranges for your optimal temperature and humidity within the fridge.  The program will then adjust the power to your fridge and humidifier when it gets outside of these ranges (via the WeMo Insight switches).</p>
+
+<p>All data is logged to a MySQL database, as well as a "last run" CURINGLOG file that you can check for last actions.  Optionally you can also use the Raspberry Pi camera to take a picture inside the fridge for display on a webpage.</p>
+
+<h1>
 <a id="hardware-requirements" class="anchor" href="#hardware-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hardware Requirements</h1>
 
 <ul>
