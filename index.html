@@ -60,29 +60,19 @@
 <h1>
 <a id="mysql-schema" class="anchor" href="#mysql-schema" aria-hidden="true"><span class="octicon octicon-link"></span></a>MySQL Schema</h1>
 
-<p><code>mysql&gt; create table chamberlog(
-        -&gt; entry_id INT AUTO_INCREMENT PRIMARY KEY,
-        -&gt; date DATETIME,
-        -&gt; temp DECIMAL(2,2),
-        -&gt; humidity DECIMAL(2,2),
-        -&gt; tempaction VARCHAR(20),
-        -&gt; humdityaction VARCHAR(20));
-    Query OK, 0 rows affected (0.02 sec)
-</code><br>
-<code>
-    mysql&gt; describe chamberlog;
-    +----------------+--------------+------+-----+---------+----------------+
-    | Field          | Type         | Null | Key | Default | Extra          |
-    +----------------+--------------+------+-----+---------+----------------+
-    | entry_id       | int(11)      | NO   | PRI | NULL    | auto_increment |
-    | date           | datetime     | YES  |     | NULL    |                |
-    | temp           | decimal(4,2) | YES  |     | NULL    |                |
-    | humidity       | decimal(4,2) | YES  |     | NULL    |                |
-    | tempaction     | varchar(20)  | YES  |     | NULL    |                |
-    | humidityaction | varchar(20)  | YES  |     | NULL    |                |
-    +----------------+--------------+------+-----+---------+----------------+
-    6 rows in set (0.01 sec)
-</code></p>
+<pre><code>mysql&gt; describe chamberlog;
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| entry_id       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| date           | datetime     | YES  |     | NULL    |                |
+| temp           | decimal(4,2) | YES  |     | NULL    |                |
+| humidity       | decimal(4,2) | YES  |     | NULL    |                |
+| tempaction     | varchar(20)  | YES  |     | NULL    |                |
+| humidityaction | varchar(20)  | YES  |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+6 rows in set (0.01 sec)
+</code></pre>
 
 <p><img src="http://i.imgur.com/k4dbe1n.png" alt="WeMo Insight Switch"></p>
 
