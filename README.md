@@ -1,2 +1,45 @@
 # Curing-Chamber
 Build an automated system to monitor and control the temperature and relative humidity of a curing chamber.
+
+# Hardware Requirements
+* Wine fridge.
+* Raspberry Pi 2 B.
+* WeMo Insight Switch x 2.
+* Humidifier (ultrasonic) - - important that your humidifier will immediately turn on once power is restored (stays "on").  If it has a digital on/off switch that needs to be pushed after being plugged in, it is no good for our purposes.
+* AM2302 (wired DHT22) temperature-humidity sensor - From [https://www.adafruit.com/products/393](https://www.adafruit.com/products/393).
+* Standalone temperature and humidity sensor (optional).
+* Home WiFi network.
+
+![Raspberry Pi](http://imgur.com/HuszHjj.jpg)
+
+# Software
+* Raspbian.
+* Python.
+* Ouimeaux (Python API for Belkin WeMo devices).
+* MySQL
+* Apache
+* RASPI-RHT.
+* MySQL connector.
+
+![Temperature and humidity sensor.](http://imgur.com/CggsLWZ.jpg)
+
+# MySQL Schema
+	mysql> describe chamberlog;
+	+----------------+--------------+------+-----+---------+----------------+
+	| Field          | Type         | Null | Key | Default | Extra          |
+	+----------------+--------------+------+-----+---------+----------------+
+	| entry_id       | int(11)      | NO   | PRI | NULL    | auto_increment |
+	| date           | datetime     | YES  |     | NULL    |                |
+	| temp           | decimal(4,2) | YES  |     | NULL    |                |
+	| humidity       | decimal(4,2) | YES  |     | NULL    |                |
+	| tempaction     | varchar(20)  | YES  |     | NULL    |                |
+	| humidityaction | varchar(20)  | YES  |     | NULL    |                |
+	+----------------+--------------+------+-----+---------+----------------+
+	6 rows in set (0.01 sec)
+
+
+![WeMo Insight Switch](http://i.imgur.com/k4dbe1n.png)
+
+# To Do
+* Send SMS alerts for various events (out of water, can't connect to WeMo devices).
+* Create graphs with HTML5 based on MySQL data.
